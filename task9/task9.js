@@ -514,6 +514,73 @@ console.log(userThree.showData);
 console.log(userOne.c); 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// String Method
+
+String.prototype.addLove = function () {
+  return `I Love ${this} Web School`;
+};
+
+// Do Not Edit Below
+let myStr = "Elzero";
+
+console.log(myStr.addLove());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Object Control
+
+const myObj = {
+  username: "Elzero",
+  id: 100,
+  score: 1000,
+  country: "Egypt",
+};
+
+Object.defineProperties(myObj, {
+  score: {
+    writable: false,
+  },
+
+  id: {
+    enumerable: false,
+  },
+});
+
+delete myObj.country;
+
+myObj.score = 500;
+
+for (let prop in myObj) {
+  console.log(`${prop} => ${myObj[prop]}`);
+}
+
+console.log(myObj);
+
 // end tasks
 
 
